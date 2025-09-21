@@ -26,9 +26,37 @@ table {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f9f9f9; /* light grey */
+  background-color: #f9f9f9; 
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #ffffff; /* white */
+  background-color: #ffffff;
+}
+
+
+.skeleton-row td {
+  padding: 8px;
+}
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px; /* adjust as needed */
+  font-family: Arial, sans-serif;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3; /* light grey */
+  border-top: 6px solid #3498db; /* blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
